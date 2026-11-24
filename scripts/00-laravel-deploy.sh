@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Installing composer dependencies..."
-composer install --no-dev --optimize-autoloader --no-interaction --working-dir=/var/www/html
-
 echo "Running database migrations..."
 php artisan migrate --force
 
